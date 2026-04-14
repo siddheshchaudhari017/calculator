@@ -9,7 +9,7 @@ function App() {
 
   // Fetch history on mount
   useEffect(() => {
-    fetch('http://localhost:5000/api/history')
+    fetch('https://calculator-irvq.onrender.com/api/history')
       .then(res => res.json())
       .then(data => {
         if(Array.isArray(data)) setHistory(data);
@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   const saveHistory = (equation, result) => {
-    fetch('http://localhost:5000/api/history', {
+    fetch('https://calculator-irvq.onrender.com/api/history', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ equation, result: result.toString() })
