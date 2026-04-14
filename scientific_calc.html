@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb19b",
+                    "surface-container-high": "#1d2024",
+                    "surface-container-highest": "#23262a",
+                    "tertiary-fixed": "#f39cfb",
+                    "error": "#ff716c",
+                    "tertiary": "#fab0ff",
+                    "inverse-primary": "#006976",
+                    "surface-container": "#171a1d",
+                    "primary-fixed": "#00e3fd",
+                    "inverse-on-surface": "#535559",
+                    "error-container": "#9f0519",
+                    "surface-dim": "#0c0e11",
+                    "secondary-dim": "#ff734a",
+                    "tertiary-container": "#f39cfb",
+                    "on-surface": "#f9f9fd",
+                    "on-primary-fixed": "#003840",
+                    "inverse-surface": "#f9f9fd",
+                    "surface-variant": "#23262a",
+                    "on-tertiary": "#6a1f77",
+                    "on-error": "#490006",
+                    "on-surface-variant": "#aaabaf",
+                    "surface-container-low": "#111417",
+                    "error-dim": "#d7383b",
+                    "outline": "#747579",
+                    "primary-container": "#00e3fd",
+                    "on-error-container": "#ffa8a3",
+                    "on-primary": "#005762",
+                    "on-secondary-fixed": "#661700",
+                    "on-secondary-container": "#fff6f4",
+                    "outline-variant": "#46484b",
+                    "primary-dim": "#00d4ec",
+                    "surface": "#0c0e11",
+                    "tertiary-fixed-dim": "#e48fed",
+                    "on-primary-container": "#004d57",
+                    "secondary": "#ff734a",
+                    "primary": "#81ecff",
+                    "on-background": "#f9f9fd",
+                    "on-secondary-fixed-variant": "#982700",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-fixed-variant": "#6a1f77",
+                    "secondary-container": "#b02f00",
+                    "background": "#0c0e11",
+                    "surface-bright": "#292c31",
+                    "primary-fixed-dim": "#00d4ec",
+                    "on-tertiary-fixed": "#41004d",
+                    "surface-tint": "#81ecff",
+                    "tertiary-dim": "#e48fed",
+                    "secondary-fixed": "#ffc4b4",
+                    "on-tertiary-container": "#60136d",
+                    "on-primary-fixed-variant": "#005762",
+                    "on-secondary": "#430c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(35, 38, 42, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-[#0c0e11]/80 backdrop-blur-2xl bg-gradient-to-b from-[#111417] to-transparent">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#81ecff]">calculate</span>
+<span class="text-[#81ecff] font-bold tracking-[0.2em] text-lg font-['Space_Grotesk'] uppercase">LUMINAL</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#aaabaf] hover:text-[#81ecff] transition-colors cursor-pointer active:scale-95 duration-150">history</span>
+<span class="material-symbols-outlined text-[#81ecff] transition-colors cursor-pointer active:scale-95 duration-150">settings</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-16 pb-24 flex flex-col max-w-md mx-auto relative overflow-hidden">
+<!-- Large Glassmorphic Display Area -->
+<section class="px-6 py-8 flex flex-col items-end justify-end flex-grow">
+<!-- Secondary Calculation/History Context -->
+<div class="mb-4 flex flex-wrap justify-end gap-2 overflow-x-auto no-scrollbar max-w-full">
+<span class="px-3 py-1 bg-surface-variant rounded-full text-on-surface-variant font-headline text-sm tracking-wide">
+                    245.50 × (12 + 0.15)
+                </span>
+</div>
+<!-- Result Preview (Ghost Result) -->
+<div class="text-on-surface-variant font-headline text-xl mb-2 opacity-50">
+                2,982.825
+            </div>
+<!-- Primary Large Display -->
+<div class="w-full text-right overflow-hidden">
+<h1 class="text-on-surface font-headline text-[3.5rem] leading-none font-bold break-all tracking-tight">
+                    2,982.825
+                </h1>
+</div>
+</section>
+<!-- Scientific Controls Bar (Toggles) -->
+<section class="px-6 pb-4 flex justify-between items-center">
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-primary font-label text-xs font-bold uppercase tracking-widest border border-outline-variant/10 active:scale-90 transition-transform">
+                    2nd
+                </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label text-xs font-medium uppercase tracking-widest border border-outline-variant/10 active:scale-90 transition-transform">
+                    Deg
+                </button>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-fixed font-label text-[10px] font-bold uppercase tracking-tighter">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">science</span>
+                Advanced Mode
+            </div>
+</section>
+<!-- Main Keypad Grid -->
+<section class="px-6 pb-6 select-none">
+<div class="grid grid-cols-4 gap-3">
+<!-- Scientific Row (Editorial Elegance) -->
+<button class="h-12 flex items-center justify-center text-on-surface-variant hover:text-primary font-body text-sm transition-all active:scale-90">sin</button>
+<button class="h-12 flex items-center justify-center text-on-surface-variant hover:text-primary font-body text-sm transition-all active:scale-90">cos</button>
+<button class="h-12 flex items-center justify-center text-on-surface-variant hover:text-primary font-body text-sm transition-all active:scale-90">tan</button>
+<button class="h-12 flex items-center justify-center text-on-surface-variant hover:text-primary font-body text-sm transition-all active:scale-90">log</button>
+<!-- Action Row 1 -->
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary font-headline text-lg font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">AC</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary font-headline text-lg font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline text-lg font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">%</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline text-2xl font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">÷</button>
+<!-- Numbers & Operators -->
+<!-- Row 2 -->
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">7</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">8</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">9</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline text-2xl font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">×</button>
+<!-- Row 3 -->
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">4</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">5</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">6</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline text-3xl font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">−</button>
+<!-- Row 4 -->
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">1</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">2</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">3</button>
+<button class="h-16 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline text-2xl font-bold shadow-sm active:bg-surface-container-highest active:scale-95 transition-all">+</button>
+<!-- Row 5 (Big Buttons) -->
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">0</button>
+<button class="h-16 rounded-xl bg-surface-container flex items-center justify-center text-on-surface font-headline text-2xl font-medium shadow-sm active:bg-surface-container-high active:scale-95 transition-all">.</button>
+<button class="h-16 col-span-2 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary font-headline text-3xl font-bold shadow-[0_0_15px_rgba(129,236,255,0.3)] active:scale-[0.97] transition-all duration-150">
+                    =
+                </button>
+</div>
+</section>
+<!-- Hidden Slide-out Panel Logic (Visual Only) -->
+<div class="absolute inset-y-0 right-0 w-16 group cursor-pointer flex flex-col items-center justify-center gap-2">
+<div class="w-1 h-12 bg-outline-variant/30 rounded-full group-hover:bg-primary/50 transition-colors"></div>
+<div class="text-on-surface-variant text-[10px] uppercase tracking-tighter rotate-90 font-bold">History</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-8 pb-4 bg-[#171a1d]/90 backdrop-blur-3xl border-t border-[#46484b]/15 shadow-[0_-20px_40px_rgba(0,0,0,0.4)] rounded-t-3xl">
+<!-- Calculator (Active) -->
+<a class="flex flex-col items-center justify-center text-[#81ecff] font-bold scale-110" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase">Calculator</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-[#aaabaf] opacity-60 hover:opacity-100 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase">History</span>
+</a>
+<!-- Converter -->
+<a class="flex flex-col items-center justify-center text-[#aaabaf] opacity-60 hover:opacity-100 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase">Converter</span>
+</a>
+</nav>
+<!-- Background Decorative Elements -->
+<div class="fixed top-1/4 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed bottom-1/4 -right-20 w-80 h-80 bg-tertiary/5 rounded-full blur-[120px] -z-10"></div>
+</body></html>
